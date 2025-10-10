@@ -96,11 +96,14 @@ public class HelloFunctional {
 ---
 
 ## Hasil Eksekusi
+<<<<<<< HEAD
 Sertakan screenshot hasil eksekusi program.  
 1. ![Hasil Procedural](./screenshots/Hasil_Procedural.png)
 2. ![Screenshot hasil](./screenshots/Hasil_OOP.png)
 3. ![Screenshot hasil](./screenshots/Hasil_Functional.png)
 
+=======
+>>>>>>> c22f7a1807668eaec1c6ad8706dc7c17feb2a4c5
 
 ---
 
