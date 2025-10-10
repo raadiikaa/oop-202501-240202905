@@ -59,6 +59,7 @@ public class HelloProcedural {
         System.out.println("Hello World, I am" + " " + nama + "-" + nim);
     }
 }
+```
 
 2. OOP
 ```
@@ -79,6 +80,7 @@ public class HelloOOP {
        m.sapa();
     }
 }
+```
 
 3. Functional
 ```
