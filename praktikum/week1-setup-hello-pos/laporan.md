@@ -43,8 +43,6 @@ System.out.println(p1.getNama());
 ---
 
 ## Hasil Eksekusi
-  
-![Hasil Procedural](screenshots/Hasil_Procedural.png)
 
 ---
 
