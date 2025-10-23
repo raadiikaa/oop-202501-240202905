@@ -94,15 +94,10 @@ public class HelloFunctional {
 ---
 
 ## Hasil Eksekusi
-<<<<<<< HEAD
 Sertakan screenshot hasil eksekusi program.  
 1. ![Hasil Procedural](./screenshots/Hasil_Procedural.png)
 2. ![Screenshot hasil](./screenshots/Hasil_OOP.png)
 3. ![Screenshot hasil](./screenshots/Hasil_Functional.png)
-
-=======
->>>>>>> c22f7a1807668eaec1c6ad8706dc7c17feb2a4c5
-
 ---
 
 ## Analisis
@@ -115,7 +110,6 @@ Sertakan screenshot hasil eksekusi program.
 Program ini menggunakan pendekatan prosedural, yaitu semua perintah dijalankan secara berurutan dalam satu fungsi utama main(). Di dalamnya terdapat dua variabel, nama dan nim, yang menyimpan nilai "Radika" dan "240202905". Keduanya digabung menggunakan System.out.println("Hello World, I am " + nama + "-" + nim); untuk menampilkan hasil di layar. Semua logika berada di satu tempat tanpa class atau objek tambahan. Pendekatan ini mudah dipahami untuk program kecil namun kurang efisien untuk sistem besar karena tidak terstruktur.
 
 Output:
-
 Hello World, I am Radika-240202905
 
 2. OOP
@@ -126,7 +120,6 @@ Program ini memakai pendekatan Object-Oriented Programming (OOP) yang membagi ko
 Pendekatan ini lebih terorganisir karena data dan perilaku disatukan dalam objek. OOP memudahkan pengembangan program besar karena strukturnya modular dan dapat digunakan kembali.
 
 Output:
-
 Hello World, I am Radika-240202905
 
 3. Functional
@@ -137,14 +130,13 @@ Program ini menggunakan pendekatan functional programming yang berfokus pada fun
 Pendekatan ini lebih ringkas karena tidak perlu membuat class atau objek baru. Semua logika langsung ditulis dalam bentuk fungsi yang dapat dijalankan secara cepat dan sederhana.
 
 Output:
-
 Hello World, I am Radika-240202905
 
 2. Kendala yang dihadapi dan cara mengatasinya
 **Jawab:** Beberapa kendala yang mungkin muncul antara lain error “package does not exist” karena struktur folder tidak sesuai dengan deklarasi package. Solusinya adalah memastikan struktur folder sama seperti yang dideklarasikan, misalnya main/java/com/upb/agripos. Kendala lain adalah error “BiConsumer cannot be resolved” yang disebabkan belum menambahkan import java.util.function.BiConsumer;, sehingga perlu menambahkan baris import tersebut di awal file. Selain itu, error NoClassDefFoundError dapat muncul jika nama file dan nama class tidak sama, sehingga harus disesuaikan.
 
-*Jika program tidak berjalan di VS Code, biasanya karena konfigurasi Java runtime belum aktif. Solusinya adalah menjalankan program dengan tombol Run Java di kanan atas atau memilih menu Run > Start Debugging. Pastikan juga output dijalankan di terminal Java bawaan agar hasilnya muncul dengan benar.
----*
+Jika program tidak berjalan di VS Code, biasanya karena konfigurasi Java runtime belum aktif. Solusinya adalah menjalankan program dengan tombol Run Java di kanan atas atau memilih menu Run > Start Debugging. Pastikan juga output dijalankan di terminal Java bawaan agar hasilnya muncul dengan benar.
+---
 
 ## Kesimpulan
 Dapat disimpulkan bahwa ketiganya menghasilkan output yang sama, namun memiliki cara kerja dan struktur berbeda. Pendekatan Procedural menulis semua langkah secara berurutan dalam satu fungsi utama, sehingga mudah dipahami namun kurang fleksibel untuk program besar. Pendekatan OOP membagi program ke dalam objek yang memiliki atribut dan perilaku, membuat kode lebih terstruktur, rapi, dan mudah dikembangkan. Sedangkan Functional menggunakan ekspresi lambda yang lebih ringkas dan efisien tanpa harus membuat class atau objek tambahan.
