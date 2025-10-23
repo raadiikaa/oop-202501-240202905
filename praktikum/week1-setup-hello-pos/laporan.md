@@ -27,6 +27,7 @@ Dalam konteks Agri-POS, OOP membantu memodelkan entitas nyata seperti Produk, Tr
 
 ## Langkah Praktikum
 1. Setup Project
+<<<<<<< HEAD
    a. Pastikan sudah menginstall JDK (Java Development Kit), IDE (misal: IntelliJ IDEA, VS Code,   NetBeans), Git,    PostgreSQL, dan JavaFX di komputer.
    b. Buat folder project oop-pos-<nim>.
    c. Inisialisasi repositori Git.
@@ -38,6 +39,22 @@ Dalam konteks Agri-POS, OOP membantu memodelkan entitas nyata seperti Produk, Tr
    c. Fungsional: gunakan Stream atau lambda untuk menghitung total harga dari minimal tiga objek.
 
 3. Commit dan Push
+=======
+
+   a. Pastikan sudah menginstall JDK (Java Development Kit), IDE (misal: IntelliJ IDEA, VS Code,   NetBeans), Git, PostgreSQL, dan JavaFX di komputer.
+   b. Buat folder project oop-pos-<nim>.
+   c. Inisialisasi repositori Git.
+   d. Buat struktur awal src/main/java/com/upb/agripos/.
+   e. Pastikan semua tools dapat berjalan (uji dengan membuat dan menjalankan program Java sederhana).
+2. Program Sederhana dalam 3 Paradigma
+
+   a. Prosedural: program untuk menghitung total harga dua produk.
+   b. OOP: class Produk dengan atribut nama dan harga, buat minimal tiga objek, lalu hitung total.
+   c. Fungsional: gunakan Stream atau lambda untuk menghitung total harga dari minimal tiga objek.
+
+3. Commit dan Push
+
+>>>>>>> 711a716 (week2-class-object)
    a. Commit dengan pesan: week1-setup-hello-pos.
 ---
 
@@ -45,7 +62,10 @@ Dalam konteks Agri-POS, OOP membantu memodelkan entitas nyata seperti Produk, Tr
 
 1. Procedural 
 ```
+<<<<<<< HEAD
 
+=======
+>>>>>>> 711a716 (week2-class-object)
 // HelloProcedural.java
 public class HelloProcedural {
     public static void main(String[] args) {
@@ -89,27 +109,44 @@ public class HelloFunctional {
         sapa.accept("Radika", "240202905");
     }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 711a716 (week2-class-object)
 ```
 ---
 
 ## Hasil Eksekusi
+<<<<<<< HEAD
 Sertakan screenshot hasil eksekusi program.  
 1. ![Hasil Procedural](./screenshots/Hasil_Procedural.png)
+=======
+1. ![Screenshot hasil](./screenshots/Hasil_Procedural.png)
+>>>>>>> 711a716 (week2-class-object)
 2. ![Screenshot hasil](./screenshots/Hasil_OOP.png)
 3. ![Screenshot hasil](./screenshots/Hasil_Functional.png)
 ---
 
 ## Analisis
+<<<<<<< HEAD
 - Jelaskan bagaimana kode berjalan?
    **Jawab:**
     
+=======
+1. Jelaskan bagaimana kode berjalan? 
+**Jawab:**
+
+>>>>>>> 711a716 (week2-class-object)
 1. Procedural
    HelloProcedural.java
 
 Program ini menggunakan pendekatan prosedural, yaitu semua perintah dijalankan secara berurutan dalam satu fungsi utama main(). Di dalamnya terdapat dua variabel, nama dan nim, yang menyimpan nilai "Radika" dan "240202905". Keduanya digabung menggunakan System.out.println("Hello World, I am " + nama + "-" + nim); untuk menampilkan hasil di layar. Semua logika berada di satu tempat tanpa class atau objek tambahan. Pendekatan ini mudah dipahami untuk program kecil namun kurang efisien untuk sistem besar karena tidak terstruktur.
 
 Output:
+<<<<<<< HEAD
+=======
+
+>>>>>>> 711a716 (week2-class-object)
 Hello World, I am Radika-240202905
 
 2. OOP
@@ -120,6 +157,10 @@ Program ini memakai pendekatan Object-Oriented Programming (OOP) yang membagi ko
 Pendekatan ini lebih terorganisir karena data dan perilaku disatukan dalam objek. OOP memudahkan pengembangan program besar karena strukturnya modular dan dapat digunakan kembali.
 
 Output:
+<<<<<<< HEAD
+=======
+
+>>>>>>> 711a716 (week2-class-object)
 Hello World, I am Radika-240202905
 
 3. Functional
@@ -130,9 +171,16 @@ Program ini menggunakan pendekatan functional programming yang berfokus pada fun
 Pendekatan ini lebih ringkas karena tidak perlu membuat class atau objek baru. Semua logika langsung ditulis dalam bentuk fungsi yang dapat dijalankan secara cepat dan sederhana.
 
 Output:
+<<<<<<< HEAD
 Hello World, I am Radika-240202905
 
 - Kendala yang dihadapi dan cara mengatasinya
+=======
+
+Hello World, I am Radika-240202905
+
+2. Kendala yang dihadapi dan cara mengatasinya
+>>>>>>> 711a716 (week2-class-object)
 **Jawab:** Beberapa kendala yang mungkin muncul antara lain error “package does not exist” karena struktur folder tidak sesuai dengan deklarasi package. Solusinya adalah memastikan struktur folder sama seperti yang dideklarasikan, misalnya main/java/com/upb/agripos. Kendala lain adalah error “BiConsumer cannot be resolved” yang disebabkan belum menambahkan import java.util.function.BiConsumer;, sehingga perlu menambahkan baris import tersebut di awal file. Selain itu, error NoClassDefFoundError dapat muncul jika nama file dan nama class tidak sama, sehingga harus disesuaikan.
 
 Jika program tidak berjalan di VS Code, biasanya karena konfigurasi Java runtime belum aktif. Solusinya adalah menjalankan program dengan tombol Run Java di kanan atas atau memilih menu Run > Start Debugging. Pastikan juga output dijalankan di terminal Java bawaan agar hasilnya muncul dengan benar.
@@ -157,4 +205,8 @@ Secara keseluruhan, setiap paradigma memiliki keunggulan masing-masing: prosedur
 4. Mengapa OOP lebih cocok untuk mengembangkan aplikasi POS dibanding prosedural? 
 **Jawaban:** Karena aplikasi POS memiliki banyak entitas seperti produk, pelanggan, transaksi, dan pembayaran yang saling berhubungan. Dengan OOP, setiap entitas dapat dimodelkan sebagai objek dengan atribut dan perilakunya sendiri. Hal ini membuat program lebih mudah dikembangkan, diuji, serta diperluas tanpa harus mengubah keseluruhan kode.
 
+<<<<<<< HEAD
 5. Bagaimana paradigma fungsional dapat membantu mengurangi kode berulang (boilerplate code)? **Jawaban:** Paradigma fungsional memungkinkan penggunaan fungsi-fungsi murni, lambda expression, dan higher-order functions yang dapat digunakan kembali di berbagai bagian program. Dengan cara ini, programmer tidak perlu menulis ulang kode serupa berkali-kali, karena logika dapat disimpan dalam satu fungsi dan dipanggil sesuai kebutuhan, sehingga kode menjadi lebih ringkas, efisien, dan mudah dibaca.
+=======
+5. Bagaimana paradigma fungsional dapat membantu mengurangi kode berulang (boilerplate code)? **Jawaban:** Paradigma fungsional memungkinkan penggunaan fungsi-fungsi murni, lambda expression, dan higher-order functions yang dapat digunakan kembali di berbagai bagian program. Dengan cara ini, programmer tidak perlu menulis ulang kode serupa berkali-kali, karena logika dapat disimpan dalam satu fungsi dan dipanggil sesuai kebutuhan, sehingga kode menjadi lebih ringkas, efisien, dan mudah dibaca.
+>>>>>>> 711a716 (week2-class-object)
