@@ -1,5 +1,5 @@
 # Laporan Praktikum Minggu 1
-Topik: ["Paradigma dan Setup"]
+Topik: Paradigma dan Setup
 
 ## Identitas
 - Nama  : Radika Rismawati Tri Prasaja
@@ -18,7 +18,6 @@ Topik: ["Paradigma dan Setup"]
 
 ## Dasar Teori
 Paradigma pemrograman adalah cara pandang dalam menyusun program:
-
 1. Prosedural: program dibangun sebagai rangkaian perintah (fungsi/prosedur).
 2. OOP (Object-Oriented Programming): program dibangun dari objek yang memiliki data (atribut) dan perilaku (method).
 3. Fungsional: program dipandang sebagai pemetaan fungsi matematika, lebih menekankan ekspresi dan transformasi data.
@@ -28,20 +27,17 @@ Dalam konteks Agri-POS, OOP membantu memodelkan entitas nyata seperti Produk, Tr
 
 ## Langkah Praktikum
 1. Setup Project
-
-   a. Pastikan sudah menginstall JDK (Java Development Kit), IDE (misal: IntelliJ IDEA, VS Code,   NetBeans), Git, PostgreSQL, dan JavaFX di komputer.
+   a. Pastikan sudah menginstall JDK (Java Development Kit), IDE (misal: IntelliJ IDEA, VS Code,   NetBeans), Git,    PostgreSQL, dan JavaFX di komputer.
    b. Buat folder project oop-pos-<nim>.
    c. Inisialisasi repositori Git.
    d. Buat struktur awal src/main/java/com/upb/agripos/.
    e. Pastikan semua tools dapat berjalan (uji dengan membuat dan menjalankan program Java sederhana).
 2. Program Sederhana dalam 3 Paradigma
-
    a. Prosedural: program untuk menghitung total harga dua produk.
    b. OOP: class Produk dengan atribut nama dan harga, buat minimal tiga objek, lalu hitung total.
    c. Fungsional: gunakan Stream atau lambda untuk menghitung total harga dari minimal tiga objek.
 
 3. Commit dan Push
-
    a. Commit dengan pesan: week1-setup-hello-pos.
 ---
 
@@ -110,7 +106,9 @@ Sertakan screenshot hasil eksekusi program.
 ---
 
 ## Analisis
-- Jelaskan bagaimana kode berjalan.  
+1. Jelaskan bagaimana kode berjalan?
+   **Jawab:**
+    
 1. Procedural
    HelloProcedural.java
 
@@ -142,8 +140,8 @@ Output:
 
 Hello World, I am Radika-240202905
 
-- Kendala yang dihadapi dan cara mengatasinya.  
-Beberapa kendala yang mungkin muncul antara lain error “package does not exist” karena struktur folder tidak sesuai dengan deklarasi package. Solusinya adalah memastikan struktur folder sama seperti yang dideklarasikan, misalnya main/java/com/upb/agripos. Kendala lain adalah error “BiConsumer cannot be resolved” yang disebabkan belum menambahkan import java.util.function.BiConsumer;, sehingga perlu menambahkan baris import tersebut di awal file. Selain itu, error NoClassDefFoundError dapat muncul jika nama file dan nama class tidak sama, sehingga harus disesuaikan.
+2. Kendala yang dihadapi dan cara mengatasinya
+**Jawab:** Beberapa kendala yang mungkin muncul antara lain error “package does not exist” karena struktur folder tidak sesuai dengan deklarasi package. Solusinya adalah memastikan struktur folder sama seperti yang dideklarasikan, misalnya main/java/com/upb/agripos. Kendala lain adalah error “BiConsumer cannot be resolved” yang disebabkan belum menambahkan import java.util.function.BiConsumer;, sehingga perlu menambahkan baris import tersebut di awal file. Selain itu, error NoClassDefFoundError dapat muncul jika nama file dan nama class tidak sama, sehingga harus disesuaikan.
 
 Jika program tidak berjalan di VS Code, biasanya karena konfigurasi Java runtime belum aktif. Solusinya adalah menjalankan program dengan tombol Run Java di kanan atas atau memilih menu Run > Start Debugging. Pastikan juga output dijalankan di terminal Java bawaan agar hasilnya muncul dengan benar.
 ---
