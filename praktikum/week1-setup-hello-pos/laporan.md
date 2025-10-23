@@ -101,7 +101,7 @@ Sertakan screenshot hasil eksekusi program.
 ---
 
 ## Analisis
-1. Jelaskan bagaimana kode berjalan?
+- Jelaskan bagaimana kode berjalan?
    **Jawab:**
     
 1. Procedural
@@ -132,7 +132,7 @@ Pendekatan ini lebih ringkas karena tidak perlu membuat class atau objek baru. S
 Output:
 Hello World, I am Radika-240202905
 
-2. Kendala yang dihadapi dan cara mengatasinya
+- Kendala yang dihadapi dan cara mengatasinya
 **Jawab:** Beberapa kendala yang mungkin muncul antara lain error “package does not exist” karena struktur folder tidak sesuai dengan deklarasi package. Solusinya adalah memastikan struktur folder sama seperti yang dideklarasikan, misalnya main/java/com/upb/agripos. Kendala lain adalah error “BiConsumer cannot be resolved” yang disebabkan belum menambahkan import java.util.function.BiConsumer;, sehingga perlu menambahkan baris import tersebut di awal file. Selain itu, error NoClassDefFoundError dapat muncul jika nama file dan nama class tidak sama, sehingga harus disesuaikan.
 
 Jika program tidak berjalan di VS Code, biasanya karena konfigurasi Java runtime belum aktif. Solusinya adalah menjalankan program dengan tombol Run Java di kanan atas atau memilih menu Run > Start Debugging. Pastikan juga output dijalankan di terminal Java bawaan agar hasilnya muncul dengan benar.
