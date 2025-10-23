@@ -143,8 +143,8 @@ Hello World, I am Radika-240202905
 2. Kendala yang dihadapi dan cara mengatasinya
 **Jawab:** Beberapa kendala yang mungkin muncul antara lain error “package does not exist” karena struktur folder tidak sesuai dengan deklarasi package. Solusinya adalah memastikan struktur folder sama seperti yang dideklarasikan, misalnya main/java/com/upb/agripos. Kendala lain adalah error “BiConsumer cannot be resolved” yang disebabkan belum menambahkan import java.util.function.BiConsumer;, sehingga perlu menambahkan baris import tersebut di awal file. Selain itu, error NoClassDefFoundError dapat muncul jika nama file dan nama class tidak sama, sehingga harus disesuaikan.
 
-Jika program tidak berjalan di VS Code, biasanya karena konfigurasi Java runtime belum aktif. Solusinya adalah menjalankan program dengan tombol Run Java di kanan atas atau memilih menu Run > Start Debugging. Pastikan juga output dijalankan di terminal Java bawaan agar hasilnya muncul dengan benar.
----
+*Jika program tidak berjalan di VS Code, biasanya karena konfigurasi Java runtime belum aktif. Solusinya adalah menjalankan program dengan tombol Run Java di kanan atas atau memilih menu Run > Start Debugging. Pastikan juga output dijalankan di terminal Java bawaan agar hasilnya muncul dengan benar.
+---*
 
 ## Kesimpulan
 Dapat disimpulkan bahwa ketiganya menghasilkan output yang sama, namun memiliki cara kerja dan struktur berbeda. Pendekatan Procedural menulis semua langkah secara berurutan dalam satu fungsi utama, sehingga mudah dipahami namun kurang fleksibel untuk program besar. Pendekatan OOP membagi program ke dalam objek yang memiliki atribut dan perilaku, membuat kode lebih terstruktur, rapi, dan mudah dikembangkan. Sedangkan Functional menggunakan ekspresi lambda yang lebih ringkas dan efisien tanpa harus membuat class atau objek tambahan.
