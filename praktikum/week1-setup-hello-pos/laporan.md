@@ -178,7 +178,6 @@ Secara keseluruhan, setiap paradigma memiliki keunggulan masing-masing: prosedur
 **Jawaban:** Karena aplikasi POS memiliki banyak entitas seperti produk, pelanggan, transaksi, dan pembayaran yang saling berhubungan. Dengan OOP, setiap entitas dapat dimodelkan sebagai objek dengan atribut dan perilakunya sendiri. Hal ini membuat program lebih mudah dikembangkan, diuji, serta diperluas tanpa harus mengubah keseluruhan kode.
 
 <<<<<<< HEAD
-5. Bagaimana paradigma fungsional dapat membantu mengurangi kode berulang (boilerplate code)? **Jawaban:** Paradigma fungsional memungkinkan penggunaan fungsi-fungsi murni, lambda expression, dan higher-order functions yang dapat digunakan kembali di berbagai bagian program. Dengan cara ini, programmer tidak perlu menulis ulang kode serupa berkali-kali, karena logika dapat disimpan dalam satu fungsi dan dipanggil sesuai kebutuhan, sehingga kode menjadi lebih ringkas, efisien, dan mudah dibaca.
 =======
 5. Bagaimana paradigma fungsional dapat membantu mengurangi kode berulang (boilerplate code)? **Jawaban:** Paradigma fungsional memungkinkan penggunaan fungsi-fungsi murni, lambda expression, dan higher-order functions yang dapat digunakan kembali di berbagai bagian program. Dengan cara ini, programmer tidak perlu menulis ulang kode serupa berkali-kali, karena logika dapat disimpan dalam satu fungsi dan dipanggil sesuai kebutuhan, sehingga kode menjadi lebih ringkas, efisien, dan mudah dibaca.
 >>>>>>> 711a716 (week2-class-object)
