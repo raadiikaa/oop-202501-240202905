@@ -37,25 +37,10 @@ Dalam konteks Agri-POS, OOP membantu memodelkan entitas nyata seperti Produk, Tr
    a. Prosedural: program untuk menghitung total harga dua produk.
    b. OOP: class Produk dengan atribut nama dan harga, buat minimal tiga objek, lalu hitung total.
    c. Fungsional: gunakan Stream atau lambda untuk menghitung total harga dari minimal tiga objek.
-
 3. Commit dan Push
+    a. Commit dengan pesan: week1-setup-hello-pos.
 =======
-
-   a. Pastikan sudah menginstall JDK (Java Development Kit), IDE (misal: IntelliJ IDEA, VS Code,   NetBeans), Git, PostgreSQL, dan JavaFX di komputer.
-   b. Buat folder project oop-pos-<nim>.
-   c. Inisialisasi repositori Git.
-   d. Buat struktur awal src/main/java/com/upb/agripos/.
-   e. Pastikan semua tools dapat berjalan (uji dengan membuat dan menjalankan program Java sederhana).
-2. Program Sederhana dalam 3 Paradigma
-
-   a. Prosedural: program untuk menghitung total harga dua produk.
-   b. OOP: class Produk dengan atribut nama dan harga, buat minimal tiga objek, lalu hitung total.
-   c. Fungsional: gunakan Stream atau lambda untuk menghitung total harga dari minimal tiga objek.
-
-3. Commit dan Push
-
 >>>>>>> 711a716 (week2-class-object)
-   a. Commit dengan pesan: week1-setup-hello-pos.
 ---
 
 ## Kode Program
@@ -129,55 +114,42 @@ Sertakan screenshot hasil eksekusi program.
 
 ## Analisis
 <<<<<<< HEAD
-- Jelaskan bagaimana kode berjalan?
-   **Jawab:**
-    
 =======
 1. Jelaskan bagaimana kode berjalan? 
 **Jawab:**
 
 >>>>>>> 711a716 (week2-class-object)
 1. Procedural
-   HelloProcedural.java
-
 Program ini menggunakan pendekatan prosedural, yaitu semua perintah dijalankan secara berurutan dalam satu fungsi utama main(). Di dalamnya terdapat dua variabel, nama dan nim, yang menyimpan nilai "Radika" dan "240202905". Keduanya digabung menggunakan System.out.println("Hello World, I am " + nama + "-" + nim); untuk menampilkan hasil di layar. Semua logika berada di satu tempat tanpa class atau objek tambahan. Pendekatan ini mudah dipahami untuk program kecil namun kurang efisien untuk sistem besar karena tidak terstruktur.
 
 Output:
+Hello World, I am Radika-240202905
 <<<<<<< HEAD
 =======
 
 >>>>>>> 711a716 (week2-class-object)
-Hello World, I am Radika-240202905
 
 2. OOP
-   HelloOOP.java
-
 Program ini memakai pendekatan Object-Oriented Programming (OOP) yang membagi kode menjadi class dan objek. Terdapat class Mahasiswa yang memiliki atribut nama dan NIM, serta konstruktor untuk menginisialisasinya. Di dalamnya juga ada method sapa() untuk mencetak pesan sapaan. Pada class utama HelloOOP, objek baru dibuat dari class Mahasiswa dengan new Mahasiswa("Radika", "240202905"), lalu method sapa() dipanggil untuk menampilkan hasil.
 
 Pendekatan ini lebih terorganisir karena data dan perilaku disatukan dalam objek. OOP memudahkan pengembangan program besar karena strukturnya modular dan dapat digunakan kembali.
 
 Output:
+Hello World, I am Radika-240202905
 <<<<<<< HEAD
 =======
 
 >>>>>>> 711a716 (week2-class-object)
-Hello World, I am Radika-240202905
 
 3. Functional
-   HelloFunctional.java
-
 Program ini menggunakan pendekatan functional programming yang berfokus pada fungsi dan ekspresi. Program memakai interface bawaan Java, yaitu BiConsumer, yang menerima dua parameter. Fungsi sapa didefinisikan menggunakan lambda expression (nama, NIM) -> System.out.println("Hello World, I am " + nama + "-" + NIM);, kemudian dijalankan dengan sapa.accept("Radika", "240202905");.
 
 Pendekatan ini lebih ringkas karena tidak perlu membuat class atau objek baru. Semua logika langsung ditulis dalam bentuk fungsi yang dapat dijalankan secara cepat dan sederhana.
 
 Output:
+Hello World, I am Radika-240202905
 <<<<<<< HEAD
-Hello World, I am Radika-240202905
-
-- Kendala yang dihadapi dan cara mengatasinya
 =======
-
-Hello World, I am Radika-240202905
 
 2. Kendala yang dihadapi dan cara mengatasinya
 >>>>>>> 711a716 (week2-class-object)
