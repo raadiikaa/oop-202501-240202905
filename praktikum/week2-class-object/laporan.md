@@ -174,9 +174,9 @@ Keduanya memastikan bahwa akses terhadap data tetap melalui mekanisme yang aman 
 
 3. Bagaimana cara class Produk mendukung pengembangan aplikasi POS yang lebih kompleks?
 **Jawaban:** Class Produk menjadi pondasi dalam sistem POS (Point of Sale) karena sudah memiliki struktur data dan perilaku dasar produk. Dengan class ini, pengembang bisa dengan mudah menambahkan fitur lain seperti:
-    1. perhitungan total harga transaksi,
-    2. pengelolaan stok otomatis saat pembelian atau pengembalian,
-    3. integrasi dengan database untuk menyimpan data produk,
-    4. serta pembuatan laporan penjualan.
+   a. perhitungan total harga transaksi,
+   b. pengelolaan stok otomatis saat pembelian atau pengembalian,
+   c. integrasi dengan database untuk menyimpan data produk,
+   d. serta pembuatan laporan penjualan.
 
 Struktur class Produk yang terenkapsulasi dan modular menjadikannya mudah diperluas (extendable) dan mudah diintegrasikan dengan fitur lain tanpa perlu mengubah kode dasarnya.
