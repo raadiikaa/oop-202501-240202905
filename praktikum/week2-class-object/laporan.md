@@ -116,8 +116,17 @@ public class MainProduk {
         System.out.println("Kode: " + p2.getKode() + ", Nama: " + p2.getNama() + ", Harga: " + p2.getHarga() + ", Stok: " + p2.getStok());
         System.out.println("Kode: " + p3.getKode() + ", Nama: " + p3.getNama() + ", Harga: " + p3.getHarga() + ", Stok: " + p3.getStok());
 
+        p1.tambahStok(1000);
+        p2.kurangiStok(25);
+        p3.kurangiStok(10);
+
+        System.out.println("\n===Update Stok===");
+        System.out.println("Kode: " + p1.getKode() + ", Nama: " + p1.getNama() + ", Harga: " + p1.getHarga() + ", Stok: " + p1.getStok());
+        System.out.println("Kode: " + p2.getKode() + ", Nama: " + p2.getNama() + ", Harga: " + p2.getHarga() + ", Stok: " + p2.getStok());
+        System.out.println("Kode: " + p3.getKode() + ", Nama: " + p3.getNama() + ", Harga: " + p3.getHarga() + ", Stok: " + p3.getStok());
+
         // Tampilkan identitas mahasiswa
-        CreditBy.print("<NIM>", "<Nama Mahasiswa>");
+        CreditBy.print("<240202905>", "<Radika Rismawati Tri Prasaja>");
     }
 }
 ```
@@ -129,20 +138,9 @@ public class MainProduk {
 
 ## Analisis
 1. Jelaskan bagaimana kode berjalan!
-   **Jawab:** Program dimulai dari method main() pada class MainProduk. JVM akan mengeksekusi baris-baris di dalamnya secara berurutan. Pertama, dibuat tiga objek Produk dengan memanggil constructor Produk(String, String, double, int) yang mengisi nilai atribut kode, nama, harga, dan stok.
+   **Jawab:** Program ini dibuat untuk menerapkan konsep dasar Object-Oriented Programming (OOP) yaitu class dan object dengan studi kasus produk pertanian. Program terdiri dari tiga file utama, yaitu Produk.java, CreditBy.java, dan MainProduk.java. Class Produk berfungsi sebagai blueprint atau cetak biru untuk membuat objek produk pertanian yang memiliki empat atribut: kode, nama, harga, dan stok. Atribut-atribut tersebut dibuat bersifat private agar tidak bisa diakses langsung dari luar class, sebagai bentuk penerapan enkapsulasi. Untuk mengakses dan memodifikasi nilai-nilai tersebut, disediakan method getter dan setter. Selain itu, class ini juga memiliki dua method tambahan, yaitu tambahStok() untuk menambah jumlah stok produk dan kurangiStok() untuk mengurangi stok dengan validasi agar tidak bisa berkurang melebihi stok yang tersedia.
 
-    Setiap objek menyimpan data produk yang berbeda seperti “Benih Padi IR64”, “Pupuk Urea 50kg”, dan “Cangkul Baja”. Untuk menampilkan data produk ke layar, method getter (getKode(), getNama(), getHarga(), dan getStok()) digunakan karena atribut di dalam class bersifat private dan tidak bisa diakses langsung. Data yang diambil dari getter kemudian dicetak menggunakan System.out.println().
-
-    Setelah semua data produk ditampilkan, program memanggil CreditBy.print() untuk menampilkan identitas mahasiswa yang mengerjakan program. Method ini bersifat statis sehingga bisa dipanggil langsung tanpa membuat objek CreditBy.
-
-    Selama proses eksekusi, JVM mengalokasikan memori untuk masing-masing objek Produk, menjalankan method getter, mencetak output ke console, lalu menutup program setelah selesai menampilkan identitas.
-
-    Hasil eksekusi yang tampil di terminal adalah:
-    Kode: BNH-001, Nama: Benih Padi IR64, Harga: 25000.0, Stok: 100
-    Kode: PPK-101, Nama: Pupuk Urea 50kg, Harga: 350000.0, Stok: 40
-    Kode: ALT-501, Nama: Cangkul Baja, Harga: 90000.0, Stok: 15
-
-    credit by: 240202905 - Radika Rismawati Tri Prasaja
+    Class kedua, CreditBy.java, berisi method static print() yang berfungsi menampilkan identitas mahasiswa (NIM dan Nama) pada akhir hasil eksekusi. Sementara itu, class MainProduk.java berperan sebagai class utama yang berisi method main(). Di dalamnya dibuat tiga objek produk yaitu p1, p2, dan p3, masing-masing mewakili jenis produk pertanian seperti benih, pupuk, dan alat pertanian. Program pertama-tama menampilkan data setiap produk menggunakan method getter, lalu memperbarui stok dengan memanggil method tambahStok() dan kurangiStok(). Setelah pembaruan dilakukan, hasil perubahan stok ditampilkan kembali di konsol untuk menunjukkan hasil operasi. Terakhir, program menampilkan identitas pembuat kode melalui pemanggilan CreditBy.print(). Hasil output menunjukkan data produk sebelum dan sesudah pembaruan stok, sehingga mahasiswa dapat memahami bagaimana objek bekerja dalam penyimpanan dan manipulasi data produk.
 
 2. Apa perbedaan pendekatan minggu ini dibanding minggu sebelumnya?
    **Jawab:** Pada praktikum minggu ke-2, program sudah menerapkan konsep Object-Oriented Programming (OOP) secara nyata dengan menggunakan beberapa class seperti Produk, CreditBy, dan MainProduk. Kelas Produk menyimpan atribut kode, nama, harga, dan stok secara private, lalu diakses melalui getter-setter untuk menjaga enkapsulasi. Objek-objek dibuat melalui konstruktor, dan terdapat method untuk menambah atau mengurangi stok. Kelas CreditBy menampilkan identitas mahasiswa, sedangkan MainProduk menjadi pusat eksekusi dengan membuat dan menampilkan data beberapa produk.
@@ -152,15 +150,14 @@ public class MainProduk {
     Secara keseluruhan, minggu pertama menekankan konsep dasar dan perbedaan paradigma, sedangkan minggu kedua menekankan penerapan penuh prinsip OOP dalam program yang modular dan terorganisir.
 
 3. Kendala yang dihadapi dan cara mengatasinya
-    **Jawab:** Selama praktikum, beberapa kendala yang mungkin muncul antara lain kesalahan struktur package, kesalahan penulisan nama class, serta error karena atribut bersifat private namun diakses langsung tanpa menggunakan getter. Masalah tersebut dapat diatasi dengan memastikan struktur folder sesuai dengan deklarasi package, menggunakan konvensi penamaan class yang benar (huruf besar di awal), dan memanfaatkan getter serta setter agar sesuai prinsip enkapsulasi.
+    **Jawab:** Selama proses pembuatan program, terdapat beberapa kendala yang dihadapi. Salah satu kendala awal adalah kesalahan penulisan nama package dan lokasi file, sehingga program tidak dapat dijalankan karena sistem tidak menemukan class yang dimaksud. Masalah ini diselesaikan dengan memastikan setiap file Java diletakkan pada folder sesuai dengan deklarasi package di baris pertama, misalnya package com.upb.agripos.model; untuk class Produk.java. Kendala berikutnya adalah munculnya error “cannot find symbol” karena class CreditBy belum di-import ke file utama. Solusinya adalah menambahkan baris import com.upb.agripos.util.CreditBy; di awal kode.
 
-    Selain itu, pastikan ekstensi Java di Visual Studio Code sudah terinstal dengan benar agar proses kompilasi dan eksekusi berjalan lancar. Bila terjadi error seperti “Could not find or load main class”, solusinya adalah menyesuaikan lokasi file agar sesuai dengan path package di dalam project.
----
+    Selain itu, sempat terjadi kesalahan logika pada method kurangiStok() di mana stok bisa berkurang menjadi nilai negatif jika validasi belum ditambahkan. Untuk mengatasinya, ditambahkan kondisi if (this.stok >= jumlah) agar pengurangan hanya dilakukan bila stok mencukupi. Kendala minor lainnya adalah tampilan output yang kurang rapi dan membingungkan. Hal ini diperbaiki dengan menambahkan baris kosong (System.out.println();) dan teks penanda seperti “===Update Stok===” agar hasil eksekusi lebih mudah dibaca. Setelah semua perbaikan dilakukan, program dapat berjalan dengan baik dan menampilkan hasil sesuai dengan tujuan praktikum.
 
 ## Kesimpulan
-Pada praktikum minggu ke-2 ini diterapkan konsep dasar Object-Oriented Programming (OOP) melalui pembuatan dan penggunaan class serta object. Class Produk dibuat sebagai blueprint yang merepresentasikan data produk pertanian dengan atribut kode, nama, harga, dan stok. Setiap atribut dijaga dengan enkapsulasi, diakses menggunakan getter dan setter agar data tetap aman dan terkontrol. Konstruktor digunakan untuk menginisialisasi nilai saat objek dibuat, sedangkan method seperti tambahStok() dan kurangiStok() berfungsi mengatur perubahan jumlah stok produk. Selain itu, penggunaan class CreditBy menunjukkan cara membuat method statis di class terpisah untuk menampilkan informasi tambahan.
+Berdasarkan hasil praktikum minggu ke-2 dengan topik Class dan Object (Produk Pertanian), dapat disimpulkan bahwa konsep class dan object merupakan dasar utama dalam pemrograman berorientasi objek (OOP). Melalui class Produk, mahasiswa dapat memahami bagaimana mendefinisikan atribut dan method untuk merepresentasikan suatu entitas dunia nyata, dalam hal ini produk pertanian. Penerapan enkapsulasi melalui penggunaan access modifier private serta getter dan setter membantu menjaga keamanan data dan membatasi akses langsung dari luar class.
 
-Dari hasil implementasi, program mampu menampilkan data tiga produk berbeda secara terstruktur di konsol dan menunjukkan bagaimana tiap objek bekerja secara mandiri namun tetap saling terhubung dalam satu sistem. Praktikum ini memperlihatkan bahwa dengan OOP, kode menjadi lebih modular, mudah dipahami, serta efisien untuk pengembangan aplikasi lebih kompleks di tahap berikutnya.
+Selain itu, dengan membuat beberapa objek pada class MainProduk, mahasiswa dapat melihat bagaimana proses instansiasi bekerja dan bagaimana setiap objek memiliki data masing-masing. Adanya method tambahStok() dan kurangiStok() juga menunjukkan cara mengubah nilai atribut suatu objek secara dinamis menggunakan method. Program ini berhasil dijalankan dengan menampilkan data produk sebelum dan sesudah perubahan stok serta identitas pembuat program. Dengan demikian, praktikum ini memberikan pemahaman yang baik mengenai penerapan class, object, enkapsulasi, serta interaksi antar class dalam satu program Java yang terstruktur.
 ---
 
 ## Quiz
