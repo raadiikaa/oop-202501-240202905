@@ -136,6 +136,7 @@ public class MainInheritance {
     }
 }
 ```
+
 ---
 
 ## Hasil Eksekusi
