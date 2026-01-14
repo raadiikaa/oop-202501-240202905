@@ -502,12 +502,8 @@ Berdasarkan praktikum Minggu 12 yang telah dilakukan, dapat disimpulkan bahwa pe
 # Traceability Bab 6 (UML) → GUI
 
 | Artefak Bab 6 | Referensi | Handler GUI | Controller/Service | DAO | Dampak UI/DB |
-|---------------|-----------|-------------|-------------------|-----|--------------|
-| **Use Case** | UC-01 Kelola Produk | Tombol Tambah/Edit/Hapus | `ProductController` → `ProductService` | `ProductDAO.insert/update/delete()` | UI list produk + DB CRUD Produk |
-| **Use Case** | UC-02 Proses Transaksi | Tombol Checkout | `TransaksiController.checkout()` → `PaymentService.pilihMetodePembayaran()` | `TransaksiDAO` | UI keranjang → pilih metode → konfirmasi + DB insert |
-| **Activity Diagram** | AD-01 Kelola Produk | Tombol aksi produk | Validasi input & panggil service | `insert()/update()/delete()` | validasi → proses → tampil hasil |
-| **Activity Diagram** | AD-02 Proses Transaksi | Pilih Metode Pembayaran | `PaymentService` → Cash/E-Wallet/Transfer | Sesuai metode | Pilih → validasi → konfirmasi pembayaran |
-| **Sequence Diagram** | SD-01 Kelola Produk | Form Input | View → Controller → Service | DAO → DB | urutan panggilan sesuai SD |
-| **Sequence Diagram** | SD-02 Transaksi Cash | Checkout → Input Cash | `PaymentService.hitungKembalian()` → `NotaService.cetakNota()` | `TransaksiDAO` | Input uang → kembalian → nota |
-| **Sequence Diagram** | SD-03 Transaksi E-Wallet | Checkout → E-Wallet | `PaymentService` → `PaymentGateway` → `NotaService` | - | Request → validasi → nota |
-| **Sequence Diagram** | SD-04 Transaksi Transfer | Checkout → Upload Bukti | `PaymentService` → `BankValidator` → `PaymentGateway` | - | Upload → validasi → konfirmasi |
+|---|---|---|---|---|---|
+| **Use Case** | UC-01 Kelola Produk - Tambah | Tombol Tambah Produk (`btnAdd`) | `ProductController.addProduct()` → `ProductService.addProduct()` | `ProductDAO.insert()` | Input form → validasi → DB insert → ListView reload |
+| **Use Case** | UC-01 Kelola Produk - Lihat | `loadData()` saat init & setelah tambah | `ProductController.loadData()` → `ProductService.getAllProducts()` | `ProductDAO.findAll()` | ListView terisi data dari DB |
+| **Activity Diagram** | AD-01 Kelola Produk | `btnAdd.setOnAction()` | Event handler → validasi input → service | `ProductDAO.insert()` | Input → validasi → simpan → clear form → reload ListView |
+| **Sequence Diagram** | SD-01 Kelola Produk (Tambah) | Form Input + Tombol Tambah | View → Controller → Service → DAO → DB | DAO → DB | Urutan: User input → event handler → Service validasi → DAO insert → reload ListView |
