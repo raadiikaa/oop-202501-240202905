@@ -499,11 +499,4 @@ Jawab:Kendala yang dihadapi antara lain konfigurasi awal JavaFX pada project Mav
 Berdasarkan praktikum Minggu 12 yang telah dilakukan, dapat disimpulkan bahwa penggunaan JavaFX memungkinkan pembuatan aplikasi berbasis GUI yang interaktif dan bersifat event-driven. Integrasi GUI dengan arsitektur MVC serta DAO dan Service Layer dari Minggu 11 dapat dilakukan tanpa mengulang logika CRUD, sehingga struktur aplikasi tetap terjaga dan sesuai prinsip SOLID. Dengan pendekatan ini, aplikasi menjadi lebih modular, mudah dikembangkan, dan memiliki pemisahan tanggung jawab yang jelas antara antarmuka, logika bisnis, dan akses data.
 ---
 
-# Traceability Bab 6 (UML) → GUI
 
-| Artefak Bab 6 | Referensi | Handler GUI | Controller/Service | DAO | Dampak UI/DB |
-|---|---|---|---|---|---|
-| **Use Case** | UC-01 Kelola Produk - Tambah | Tombol Tambah Produk (`btnAdd`) | `ProductController.addProduct()` → `ProductService.addProduct()` | `ProductDAO.insert()` | Input form → validasi → DB insert → ListView reload |
-| **Use Case** | UC-01 Kelola Produk - Lihat | `loadData()` saat init & setelah tambah | `ProductController.loadData()` → `ProductService.getAllProducts()` | `ProductDAO.findAll()` | ListView terisi data dari DB |
-| **Activity Diagram** | AD-01 Kelola Produk | `btnAdd.setOnAction()` | Event handler → validasi input → service | `ProductDAO.insert()` | Input → validasi → simpan → clear form → reload ListView |
-| **Sequence Diagram** | SD-01 Kelola Produk (Tambah) | Form Input + Tombol Tambah | View → Controller → Service → DAO → DB | DAO → DB | Urutan: User input → event handler → Service validasi → DAO insert → reload ListView |

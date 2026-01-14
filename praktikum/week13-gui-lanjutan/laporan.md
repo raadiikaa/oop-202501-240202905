@@ -469,13 +469,4 @@ Pada praktikum Week 13, aplikasi Agri-POS berhasil dikembangkan dengan tampilan 
 
 ---
 
-# Traceability Bab 6 (UML) → GUI
 
-| Artefak Bab 6 | Referensi | Handler GUI | Controller/Service | DAO | Dampak UI/DB |
-|---|---|---|---|---|---|
-| **Use Case** | UC-01 Kelola Produk - Tambah | Tombol Tambah Produk (`btnAdd`) | `ProductController.initController()` → `ProductService.addProduct()` | `ProductDAO.insert()` | Input form → validasi → DB insert → TableView reload |
-| **Use Case** | UC-01 Kelola Produk - Hapus | Tombol Hapus Produk (`btnDelete`) | `ProductController.initController()` → `ProductService.deleteProduct()` | `ProductDAO.delete()` | Pilih row → DB delete → TableView reload |
-| **Use Case** | UC-01 Kelola Produk - Lihat | `loadData()` saat init | `ProductController.loadData()` → `ProductService.getAllProducts()` | `ProductDAO.findAll()` | TableView terisi data dari DB |
-| **Activity Diagram** | AD-01 Kelola Produk | `btnAdd.setOnAction()` dengan lambda | Validasi input → `ProductService.addProduct()` | `ProductDAO.insert()` | Input → validasi → simpan → reload → clear form |
-| **Sequence Diagram** | SD-01 Kelola Produk (Tambah) | Form Input + Tombol Tambah | View → Controller (lambda) → Service → DAO | DAO → DB | Urutan: User input → lambda handler → Service validasi → DAO insert → ObservableList reload TableView |
-| **Sequence Diagram** | SD-02 Kelola Produk (Hapus) | Tombol Hapus + TableView selection | View → Controller (lambda) → Service → DAO | DAO → DB | Urutan: User pilih row → lambda handler → Service proses → DAO delete → TableView reload |
